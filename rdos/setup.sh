@@ -27,3 +27,8 @@ echo "##########################################################################
 echo "source oe-init-build-env from inside the docker container to start building."
 echo "################################################################################"
 )
+
+(
+cd "${SCRIPT_DIR}" || exit 1
+git clone -b main https://github.com/Robotics-Deployment/embedded.git
+)
