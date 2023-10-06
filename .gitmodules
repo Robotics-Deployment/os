@@ -1,3 +1,0 @@
-[submodule "rdos/embedded"]
-	path = rdos/embedded
-	url = https://github.com/Robotics-Deployment/embedded.git
