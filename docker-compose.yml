@@ -1,0 +1,17 @@
+services:
+  rdos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: robotics-deployment:os
+    container_name: rdos
+    privileged: true
+    network_mode: host
+    pid: host
+    volumes:
+      - ./rdos:/home/user/rdos
+      - /dev:/dev
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+        - DISPLAY=$DISPLAY
+        - QT_X11_NO_MITSHM=1
