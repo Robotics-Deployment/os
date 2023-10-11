@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     xz-utils \
     zstd \
     lz4 \
+    curl \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get autoremove -y \
     && apt-get clean
