@@ -2,6 +2,9 @@ FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+LABEL maintainer="Deniz Hofmeister"
+LABEL description="Robotics Deployment Command Line Interface"
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gawk \
     wget \
