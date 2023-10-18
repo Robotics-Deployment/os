@@ -23,9 +23,18 @@ git clone --depth 1 -b mickledore git://git.yoctoproject.org/meta-virtualization
 echo "finished downloading poky."
 
 git clone -b mickledore https://github.com/Robotics-Deployment/meta-robotics-deployment.git
-echo "################################################################################"
-echo "source oe-init-build-env from inside the docker container to start building."
-echo "################################################################################"
+echo "finished downloading meta-robotics-deployment."
+)
+
+(
+cd "${SCRIPT_DIR}" || exit 1
+cd poky || exit 1
+
+echo "Overwriting poky build configuration with meta-robotics-deployment."
+mkdir -p build/conf
+cp -r sources/meta-robotics-deployment/build/conf/* build/conf/
+mv sources/meta-robotics-deployment/build/conf/local.conf.sample build/conf/local.conf
+mv sources/meta-robotics-deployment/build/conf/bblayers.conf.sample build/conf/bblayers.conf
 )
 
 (
