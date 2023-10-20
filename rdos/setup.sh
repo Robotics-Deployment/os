@@ -33,8 +33,8 @@ cd poky || exit 1
 echo "Overwriting poky build configuration with meta-robotics-deployment."
 mkdir -p build/conf
 cp -r sources/meta-robotics-deployment/build/conf/* build/conf/
-mv sources/meta-robotics-deployment/build/conf/local.conf.sample build/conf/local.conf
-mv sources/meta-robotics-deployment/build/conf/bblayers.conf.sample build/conf/bblayers.conf
+mv build/conf/local.conf.sample build/conf/local.conf
+mv build/conf/bblayers.conf.sample build/conf/bblayers.conf
 )
 
 (
