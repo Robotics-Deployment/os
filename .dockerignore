@@ -1,6 +1,7 @@
 # Ignore the target directory which contains build outputs
 **/target/
 **/Cargo.lock
+**/rdos/
 
 # Ignore .git directory
 .git/

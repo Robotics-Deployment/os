@@ -3,11 +3,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: robotics-deployment:os
-    container_name: rdos
+    image: robotics-deployment:os-compiler
+    container_name: rdos-compiler
     privileged: true
     network_mode: host
     pid: host
+    ipc: host
     environment:
       - MACHINE=${MACHINE:-raspberrypi4-64}
 #      - MACHINE=${MACHINE:-qemux86-64}
